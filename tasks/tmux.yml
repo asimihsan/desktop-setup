@@ -8,5 +8,12 @@
   ansible.builtin.git:
     repo: https://github.com/tmux-plugins/tpm
     dest: /home/asim/.tmux/plugins/tpm
+- name: Fix tmux owner
+    file:
+      path: /home/asim/.tmux
+      state: directory
+      owner: asim
+      group: asim
+      recurse: True
 - name: Copy config
   copy: src=files/tmux.conf dest=/home/asim/.tmux.conf owner=asim group=asim
