@@ -5,6 +5,7 @@
   vars:
     packages:
       - curl
+      - expect
       - git
       - htop
       - mc

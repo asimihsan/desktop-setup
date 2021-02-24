@@ -6,5 +6,9 @@
 - name: Fix shell
   ansible.builtin.shell: |
     set timeout 10
-    chsh -sh /bin/zsh asim
+    spawn chsh -sh /bin/zsh asim
     exit 0
+  args:
+    /usr/bin/expect
+  delegate_to:
+    localhost
