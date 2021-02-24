@@ -2,4 +2,13 @@
   become: true
   tasks:
   - name: Install packages
-    apt: name=['htop', 'mc', 'tmux', 'vim']
+    apt:
+      name: "{{ packages }}"
+      state: present
+      update_cache: yes
+    vars:
+      package:
+        - htop
+        - mc
+        - tmux
+        - vim
