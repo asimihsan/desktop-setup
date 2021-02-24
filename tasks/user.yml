@@ -4,5 +4,5 @@
     group: asim
     shell: /bin/zsh
 - name: Fix shell
-  ansible.builtin.shell: chsh -s /bin/zsh asim
+  shell: chsh -s /bin/zsh asim
 
