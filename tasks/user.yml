@@ -1,0 +1,5 @@
+- name: Set up asim user
+  ansible.builtin.user:
+    name: asim
+    group: asim
+    shell: /bin/zsh
