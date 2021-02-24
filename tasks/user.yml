@@ -3,3 +3,8 @@
     name: asim
     group: asim
     shell: /bin/zsh
+- name: Fix shell
+  ansible.builtin.shell: |
+    set timeout 10
+    chsh -sh /bin/zsh asim
+    exit 0
