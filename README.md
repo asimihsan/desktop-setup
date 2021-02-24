@@ -11,13 +11,20 @@ sudo apt-get install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install ansible
+```
+
+This repo deliberately "vendors" galaxy roles (checks them into the same repo). You can update them by running:
+
+```
 ansible-galaxy install -r requirements.yml
 ```
 
 ## Running
 
+Clone then:
+
 ```
-sudo ansible-pull -U https://github.com/asimihsan/desktop-setup.git
+ansible-playbook -i "localhost," -c local local.yml --ask-become-pass
 ```
 
 ## References
@@ -25,3 +32,4 @@ sudo ansible-pull -U https://github.com/asimihsan/desktop-setup.git
 -   https://opensource.com/article/18/3/manage-workstation-ansible
 -   https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2
 -   https://opensource.com/article/18/5/manage-your-workstation-ansible-part-3
+-   https://stackoverflow.com/questions/22201306/ansible-galaxy-roles-install-in-to-a-specific-directory

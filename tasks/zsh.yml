@@ -1,2 +1,28 @@
-- name: Copy zshrc
-  copy: src=files/zshrc dest=/home/asim/.zshrc owner=asim group=asim
+#- name: Copy zshrc
+#  ansible.builtin.copy:
+#    src: files/zshrc
+#    dest: home/asim/.zshrc
+#    owner: asim
+#    group: asim
+
+- name: Oh My Zsh
+  include_role:
+    name: gantsign.oh-my-zsh
+  vars:
+    users:
+      - username: asim
+        oh_my_zsh:
+          theme: robbyrussell
+          plugins:
+            - git
+            - history
+            - zsh-autosuggestions
+            - zsh-syntax-highlighting 
+- name: download zsh-autosuggestions
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: "/home/asim/.oh-my-zsh/plugins/zsh-autosuggestions"
+- name: download zsh-syntaxhighlighting
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: "/home/asim/.oh-my-zsh/plugins/zsh-syntax-highlighting"

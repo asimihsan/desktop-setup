@@ -1,8 +1,7 @@
 - name: Set up asim user
+  become: true
   ansible.builtin.user:
     name: asim
     group: asim
     shell: /bin/zsh
-- name: Fix shell
-  shell: chsh -s /bin/zsh asim
 
