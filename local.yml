@@ -7,7 +7,7 @@
       state: present
       update_cache: yes
     vars:
-      package:
+      packages:
         - htop
         - mc
         - tmux
