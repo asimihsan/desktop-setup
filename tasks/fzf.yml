@@ -1,0 +1,6 @@
+- name: Checkout fzf
+  ansible.builtin.git:
+    repo: https://github.com/junegunn/fzf.git
+    dest: /home/asim/.fzf
+- name: Install fzf
+  shell: /home/asim/.fzf/install --all

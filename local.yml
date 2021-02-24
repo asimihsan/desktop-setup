@@ -11,3 +11,5 @@
     - include: tasks/tmux.yml
     - include: tasks/asdf.yml
     - include: tasks/zsh.yml
+    - include: tasks/fzf.yml
+    - include: tasks/jetbrains.yml

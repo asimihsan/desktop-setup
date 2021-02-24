@@ -5,3 +5,9 @@
     group: asim
     shell: /bin/zsh
 
+- name: Make local bin folder
+  file:
+    path: /home/asim/bin
+    state: directory
+    owner: asim
+    group: asim

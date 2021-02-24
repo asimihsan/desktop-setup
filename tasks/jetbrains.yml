@@ -1,0 +1,3 @@
+- name: jetbrains toolbox
+  include_role:
+    name: jaredhocutt.jetbrains_toolbox

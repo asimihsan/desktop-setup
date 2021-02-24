@@ -14,7 +14,7 @@
   include_role:
     name: markosamuli.asdf
   vars:
-    asdf_init_shell: true
+    asdf_init_shell: false
     asdf_user: asim
     asdf_plugins:
 #      - name: "golang"
