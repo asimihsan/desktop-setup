@@ -21,4 +21,5 @@ sudo ansible-pull -U https://github.com/asimihsan/desktop-setup.git
 
 ## References
 
-- https://opensource.com/article/18/3/manage-workstation-ansible
+-   https://opensource.com/article/18/3/manage-workstation-ansible
+-   https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2

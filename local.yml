@@ -1,14 +1,9 @@
 - hosts: localhost
   become: true
+  pre_tasks:
+  - name: update repositories
+    apt: update_cache=yes
+    changed_when: False
+  
   tasks:
-  - name: Install packages
-    apt:
-      name: "{{ packages }}"
-      state: present
-      update_cache: yes
-    vars:
-      packages:
-        - htop
-        - mc
-        - tmux
-        - vim
+    - include: tasks/packages.yml
