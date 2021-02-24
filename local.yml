@@ -8,3 +8,5 @@
   tasks:
     - include: tasks/packages.yml
     - include: tasks/tmux.yml
+    - include: tasks/asdf.yml
+    - include: tasks/zsh.yml

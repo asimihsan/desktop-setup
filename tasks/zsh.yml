@@ -1,0 +1,2 @@
+- name: Copy zshrc
+  copy: src=files/zshrc dest=/home/asim/.zshrc owner=asim group=asim

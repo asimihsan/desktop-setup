@@ -1,0 +1,12 @@
+- name: Checkout asdf
+  ansible.builtin.git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: /home/asim/.asdf
+    version: v0.8.0
+- name: Fix asdf owner
+  file:
+    path: /home/asim/.asdf
+    state: directory
+    owner: asim
+    group: asim
+    recurse: True
