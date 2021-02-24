@@ -1,0 +1,10 @@
+- name: Create tmux hidden folder
+  file:
+    path: /home/asim/.tmux
+    state: directory
+- name: Checkout tmux plugin manager
+  ansible.builtin.git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: /home/asim/.tmux/plugins/tpm
+- name: Copy config
+  copy: src=files/tmux.conf dest=/home/asim/.tmux.conf
