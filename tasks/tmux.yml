@@ -2,9 +2,11 @@
   file:
     path: /home/asim/.tmux
     state: directory
+    owner: asim
+    group: asim
 - name: Checkout tmux plugin manager
   ansible.builtin.git:
     repo: https://github.com/tmux-plugins/tpm
     dest: /home/asim/.tmux/plugins/tpm
 - name: Copy config
-  copy: src=files/tmux.conf dest=/home/asim/.tmux.conf
+  copy: src=files/tmux.conf dest=/home/asim/.tmux.conf owner=asim group=asim
