@@ -1,12 +1,35 @@
-- name: Checkout asdf
-  ansible.builtin.git:
-    repo: https://github.com/asdf-vm/asdf.git
-    dest: /home/asim/.asdf
-    version: v0.8.0
-- name: Fix asdf owner
-  file:
-    path: /home/asim/.asdf
-    state: directory
+- name: Copy asdf-rust plugin config
+  ansible.builtin.copy:
+    src: files/default-cargo-crates
+    dest: /home/asim/.default-cargo-crates
     owner: asim
     group: asim
-    recurse: True
+- name: Copy asdf-node plugin config
+  ansible.builtin.copy:
+    src: files/default-npm-packages
+    dest: /home/asim/.default-npm-packages
+    owner: asim
+    group: asim
+- name: asdf
+  include_role:
+    name: markosamuli.asdf
+  vars:
+    asdf_init_shell: true
+    asdf_user: asim
+    asdf_plugins:
+#      - name: "golang"
+#        versions:
+#          - "1.16"
+#        global: "1.16"
+#      - name: "nodejs"
+#        versions:
+#          - "14.16.0"
+#        global: "14.16.0"
+#      - name: "python"
+#        versions:
+#          - "3.9.2"
+#        global: "3.9.2"
+      - name: "rust"
+        versions:
+          - "1.50.0"
+        global: "1.50.0"

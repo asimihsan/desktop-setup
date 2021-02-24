@@ -5,10 +5,16 @@
     state: present
   vars:
     packages:
+      - build-essential
+      - coreutils
       - curl
+      - dirmngr
       - expect
+      - gawk
       - git
+      - gpg
       - htop
+      - make
       - mc
       - tmux
       - vim
