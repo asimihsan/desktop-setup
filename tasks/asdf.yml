@@ -29,7 +29,7 @@
         versions:
           - "anaconda3-2020.11"
         global: "anaconda3-2020.11"
-      - name: "rust"
-        versions:
-          - "1.50.0"
-        global: "1.50.0"
+#      - name: "rust"
+#        versions:
+#          - "1.50.0"
+#        global: "1.50.0"

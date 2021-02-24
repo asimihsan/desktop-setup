@@ -2,3 +2,5 @@
   shell: pip install --upgrade pip
 - name: Install ansible
   shell: pip install ansible
+- name: asdf reshim python
+  shell: asdf reshim python
