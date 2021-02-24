@@ -10,7 +10,6 @@
       - curl
       - dirmngr
       - expect
-      - fzf
       - gawk
       - git
       - gpg

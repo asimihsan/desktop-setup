@@ -1,0 +1,2 @@
+- name: Install wasm-pack
+  shell: cargo install wasm-pack

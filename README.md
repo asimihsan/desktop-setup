@@ -13,6 +13,13 @@ sudo apt-get update
 sudo apt-get install ansible
 ```
 
+after you install asdf you'll need ansible installed as well):
+
+```
+pip install ansible
+asdf reshim python
+```
+
 This repo deliberately "vendors" galaxy roles (checks them into the same repo). You can update them by running:
 
 ```

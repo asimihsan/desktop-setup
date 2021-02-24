@@ -13,3 +13,5 @@
     - include: tasks/zsh.yml
     - include: tasks/fzf.yml
     - include: tasks/jetbrains.yml
+    - include: tasks/cargo-packages.yml
+    - include: tasks/pip-packages.yml
