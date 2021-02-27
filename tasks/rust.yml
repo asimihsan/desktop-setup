@@ -6,3 +6,7 @@
   shell: /home/asim/.cargo/bin/cargo install wasm-pack
   args:
     creates: /home/asim/.cargo/bin/wasm-pack
+- name: Install twiggy
+  shell: /home/asim/.cargo/bin/cargo install twiggy
+  args:
+    creates: /home/asim/.cargo/bin/twiggy
